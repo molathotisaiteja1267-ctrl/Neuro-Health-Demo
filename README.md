@@ -309,19 +309,14 @@ This project is open-source and available under the [MIT License](LICENSE).
 ---
 
 ##  Acknowledgments
+This project was built as a personal demonstration of applied AI skills in the healthcare domain. It showcases the ability to design and implement a modular RAG-based system that combines large language models with domain-specific medical knowledge for safe and responsible health guidance.
 
-This project is developed as part of the **Google Summer of Code 2026** program with
-**UC Santa Cruz Open Source Program Office (UCSC OSPO)** under the
-**Open Source Research Experience (OSRE) 2026**.
+References:
 
-**Mentors:**
-- Linsey Pang (Distinguished Scientist, PayPal)
-- Bin Dong (Research Scientist, Lawrence Berkeley National Laboratory)
+Singhal et al. (2023). "Large Language Models Encode Clinical Knowledge." Nature
+Singhal et al. (2023). "Towards Expert-Level Medical Question Answering with Large Language Models." arXiv
+Nori et al. (2023). "Capabilities of GPT-4 on Medical Challenge Problems." arXiv
+Lewis et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS
+MedlinePlus Medical Encyclopedia — https://medlineplus.gov/
 
-**References:**
-- Singhal et al. (2023). "Large Language Models Encode Clinical Knowledge." *Nature*
-- Singhal et al. (2023). "Towards Expert-Level Medical Question Answering with Large Language Models." *arXiv*
-- Nori et al. (2023). "Capabilities of GPT-4 on Medical Challenge Problems." *arXiv*
-- Lewis et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." *NeurIPS*
-- MedlinePlus Medical Encyclopedia — https://medlineplus.gov/
-```
+Disclaimer: This project is intended purely for educational and demonstration purposes. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for any medical concerns.
