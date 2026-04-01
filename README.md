@@ -16,19 +16,19 @@ Built entirely with open-source tools — runs locally with zero paid APIs or cl
 
 NeuroHealth is a conversational health assistant specializing in cardiovascular health that can:
 
-- **Understand intent** — Dynamically classifies user queries (symptom inquiry, medication
+- Understand intent — Dynamically classifies user queries (symptom inquiry, medication
   question, appointment guidance, etc.) using LLM-based reasoning, not hardcoded keywords
-- **Extract and match symptoms** — Retrieves validated medical content matching user-described
+- Extract and match symptoms — Retrieves validated medical content matching user-described
   symptoms through semantic search
-- **Assess urgency** — Classifies medical urgency into 5 tiers (Emergency → Informational)
+- Assess urgency — Classifies medical urgency into 5 tiers (Emergency → Informational)
   with conservative safety overrides for life-threatening situations
-- **Recommend specialists** — Suggests appropriate doctor types based on retrieved medical
+- Recommend specialists — Suggests appropriate doctor types based on retrieved medical
   content metadata, not hardcoded condition-to-specialist mappings
-- **Generate grounded responses** — Produces health guidance anchored in validated knowledge
+- Generate grounded responses — Produces health guidance anchored in validated knowledge
   base content, reducing hallucination risk
-- **Maintain conversation context** — Supports natural multi-turn dialogues without requiring
+- Maintain conversation context*— Supports natural multi-turn dialogues without requiring
   users to repeat information
-- **Enforce safety boundaries** — Detects out-of-scope queries, refuses to diagnose or prescribe,
+- Enforce safety boundaries*— Detects out-of-scope queries, refuses to diagnose or prescribe,
   and directs emergencies to 911
 
 ---
@@ -43,14 +43,14 @@ For retrieving relevant medical knowledge, the Symptom Extraction Module leverag
 Finally, the Response Formatting Module selects the appropriate strategy, assembles the prompt, and generates the final response, which includes health guidance, appointment recommendations, and necessary safety disclaimers.
 ```
 
-### Tech Stack
+## Tech Stack
 
-| Component | Technology |
-|---|---|
-| LLM | Llama 3.1 via Ollama |
-| Embeddings | BGE-large-en-v1.5 (sentence-transformers) |
-| Vector Database | ChromaDB |
-| Language | Python 3.11+ |
+| Component        | Technology                              |
+|------------------|-----------------------------------------|
+| LLM              | Llama 3.1 via Ollama                    |
+| Embeddings       | BGE-large-en-v1.5 (sentence-transformers) |
+| Vector Database  | ChromaDB                                |
+| Language         | Python 3.11+                            |
 
 ---
 
@@ -175,13 +175,13 @@ adv_results = evaluator.run_adversarial_test(verbose=True)
 
 ### Test Categories
 
-- **Emergency detection** — Validates urgency assessment for life-threatening scenarios
-- **Scope validation** — Tests intent recognition boundaries (rejects out-of-scope queries)
-- **Symptom interpretation** — Evaluates RAG retrieval quality for symptom descriptions
-- **Medication queries** — Tests knowledge grounding accuracy
-- **Appointment routing** — Validates specialist recommendation appropriateness
-- **Multi-turn coherence** — Tests conversation context across realistic dialogue flows
-- **Adversarial robustness** — Probes prompt injection, prescription requests, empty inputs
+- Emergency detection — Validates urgency assessment for life-threatening scenarios
+- Scope validation — Tests intent recognition boundaries (rejects out-of-scope queries)
+- Symptom interpretation — Evaluates RAG retrieval quality for symptom descriptions
+- Medication queries — Tests knowledge grounding accuracy
+- Appointment routing — Validates specialist recommendation appropriateness
+- Multi-turn coherence — Tests conversation context across realistic dialogue flows
+- Adversarial robustness — Probes prompt injection, prescription requests, empty inputs
 
 ---
 
@@ -234,16 +234,16 @@ with heading-aware processing, indexes it with the specialist metadata, and uses
 
 NeuroHealth implements multiple layers of safety:
 
-- **LLM-driven urgency assessment** with conservative emergency override — whenever the
+- LLM-driven urgency assessment with conservative emergency override — whenever the
   emergency flag is true, urgency is forced to EMERGENCY regardless of other signals
-- **Dual-signal scope cross-validation** — triage classification is confirmed against retrieval
+- Dual-signal scope cross-validation — triage classification is confirmed against retrieval
   similarity scores to reduce both false rejections and false acceptances
-- **No diagnoses or prescriptions** — the system prompt and instruction templates explicitly
+- No diagnoses or prescriptions — the system prompt and instruction templates explicitly
   prevent diagnostic or prescriptive responses
-- **Consistent disclaimers** — every response includes appropriate safety disclaimers recommending
+- Consistent disclaimers — every response includes appropriate safety disclaimers recommending
   professional medical consultation
-- **Local-first architecture** — all processing runs locally; user queries never leave the machine
-- **No data retention** — conversation history exists only in memory and is discarded on session end
+- Local-first architecture — all processing runs locally; user queries never leave the machine
+- No data retention — conversation history exists only in memory and is discarded on session end
 
 ---
 
