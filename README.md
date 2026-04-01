@@ -36,23 +36,11 @@ NeuroHealth is a conversational health assistant specializing in cardiovascular 
 ## Architecture
 
 ```
-User Query
-    │
-    ├──→ Conversation Manager (store message, provide multi-turn context)
-    │
-    ├──→ Intent Recognition Module (LLM: intent, scope, clarification needs)
-    │
-    ├──→ Urgency Assessment Module (LLM: urgency level with safety overrides)
-    │
-    ├──→ Symptom Extraction Module (RAG: embed → search → filter → assemble context)
-    │
-    ├──→ Appointment Recommendation Module (extract specialists from retrieval metadata)
-    │
-    ├──→ Cross-Validation (triage + retrieval signals confirm scope)
-    │
-    ├──→ Response Formatting Module (select strategy → assemble prompt → generate)
-    │
-    └──→ Final Response (health guidance, appointment recommendations, safety disclaimers)
+The system follows a modular pipeline approach. When a user query is received, it first passes through the Conversation Manager, which stores the message and provides multi-turn context. Next, the Intent Recognition Module uses the LLM to determine the intent, scope, and any clarification needs. The Urgency Assessment Module then evaluates the urgency level with built-in safety overrides for critical situations.
+
+For retrieving relevant medical knowledge, the Symptom Extraction Module leverages RAG by embedding the query, searching the vector database, filtering results, and assembling context. The Appointment Recommendation Module extracts specialist recommendations from the retrieval metadata. A Cross-Validation step ensures that both triage and retrieval signals confirm the scope of the response.
+
+Finally, the Response Formatting Module selects the appropriate strategy, assembles the prompt, and generates the final response, which includes health guidance, appointment recommendations, and necessary safety disclaimers.
 ```
 
 ### Tech Stack
@@ -69,21 +57,7 @@ User Query
 ## Project Structure
 
 ```
-neurohealth/
-├── knowledge_base/                  # Medical knowledge (Markdown files)
-│   ├── coronary_artery_disease.md
-│   ├── heart_failure.md
-│   ├── arrhythmias.md
-│   ├── hypertension.md
-│   ├── heart_valve_disease.md
-│   ├── cardiac_medications.md
-│   ├── heart_healthy_lifestyle.md
-│   ├── cardiovascular_screening.md
-│   ├── cardiac_procedures.md
-│   └── special_topics.md
-├── neurohealth_chroma_db/           # ChromaDB persistent storage (auto-created)
-├── neurohealth.ipynb                # Main notebook (all cells)
-└── README.md
+The project is organized under the neurohealth/ directory. The knowledge_base/ folder contains all the medical knowledge stored as Markdown files, covering topics such as coronary artery disease, heart failure, arrhythmias, hypertension, heart valve disease, cardiac medications, heart-healthy lifestyle, cardiovascular screening, cardiac procedures, and special topics. The neurohealth_chroma_db/ directory is automatically created at runtime and serves as the persistent storage for ChromaDB. The main application logic resides in neurohealth.ipynb, which contains all the code cells for running the assistant.
 ```
 
 ---
@@ -287,7 +261,7 @@ cardiovascular health topics.
 
 ---
 
-## 🛠️ Technical Details
+##  Technical Details
 
 ### Key Design Decisions
 
