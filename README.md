@@ -1,7 +1,7 @@
 # NeuroHealth: AI-Powered Health Assistant
 
 ```markdown
-# 🫀 NeuroHealth: AI-Powered Health Assistant
+#  NeuroHealth: AI-Powered Health Assistant
 
 An intelligent conversational agent for accessible healthcare guidance, built with
 Retrieval-Augmented Generation (RAG) architecture. NeuroHealth combines LLM-based
@@ -12,7 +12,7 @@ Built entirely with open-source tools — runs locally with zero paid APIs or cl
 
 ---
 
-## 🎯 What NeuroHealth Does
+##  What NeuroHealth Does
 
 NeuroHealth is a conversational health assistant specializing in cardiovascular health that can:
 
@@ -33,7 +33,7 @@ NeuroHealth is a conversational health assistant specializing in cardiovascular 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 User Query
@@ -66,7 +66,7 @@ User Query
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 neurohealth/
@@ -88,7 +88,7 @@ neurohealth/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -256,7 +256,7 @@ with heading-aware processing, indexes it with the specialist metadata, and uses
 
 ---
 
-## 🔒 Safety Design
+##  Safety Design
 
 NeuroHealth implements multiple layers of safety:
 
@@ -273,7 +273,7 @@ NeuroHealth implements multiple layers of safety:
 
 ---
 
-## ⚠️ Important Disclaimer
+##  Important Disclaimer
 
 **NeuroHealth is an informational health assistant, NOT a medical device or diagnostic tool.**
 
@@ -328,13 +328,13 @@ MAX_HISTORY_TURNS = 10    # conversation context window
 
 ---
 
-## 📄 License
+##  License
 
 This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 This project is developed as part of the **Google Summer of Code 2026** program with
 **UC Santa Cruz Open Source Program Office (UCSC OSPO)** under the
