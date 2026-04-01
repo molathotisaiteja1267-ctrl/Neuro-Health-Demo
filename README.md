@@ -313,10 +313,10 @@ This project was built as a personal demonstration of applied AI skills in the h
 
 References:
 
-Singhal et al. (2023). "Large Language Models Encode Clinical Knowledge." Nature
-Singhal et al. (2023). "Towards Expert-Level Medical Question Answering with Large Language Models." arXiv
-Nori et al. (2023). "Capabilities of GPT-4 on Medical Challenge Problems." arXiv
-Lewis et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS
-MedlinePlus Medical Encyclopedia — https://medlineplus.gov/
+- Singhal et al. (2023). "Large Language Models Encode Clinical Knowledge." Nature
+- Singhal et al. (2023). "Towards Expert-Level Medical Question Answering with Large Language Models." arXiv
+- Nori et al. (2023). "Capabilities of GPT-4 on Medical Challenge Problems." arXiv
+- Lewis et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." NeurIPS
+- MedlinePlus Medical Encyclopedia — https://medlineplus.gov/
 
 Disclaimer: This project is intended purely for educational and demonstration purposes. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for any medical concerns.
